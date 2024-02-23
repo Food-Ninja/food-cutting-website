@@ -8,7 +8,7 @@ icon: fa-home
 order: 1
 ---
 
-**ANNOUNCEMENT**
+**ANNOUNCEMENT**:
 We present our work in a **Tutorial on Contextualizing and Executing Robot Manipulation Plans Using Web Knowledge** at [ESWC24](https://2024.eswc-conferences.org/) and [HHAI24](https://hhai-conference.org/2024/).
 More information can be found on the corresponding [Website](https://kr3-workshop.net/).
 
