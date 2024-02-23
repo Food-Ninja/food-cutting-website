@@ -1,6 +1,6 @@
 ---
 title: Executing Actions
-layout: "execution_list"
+layout: blog
 icon: fa-robot
 order: 3
 ---
