@@ -1,26 +1,23 @@
 ---
 title: Knowledge Types
 layout: "page"
-icon: fa-brain
+icon: fa-network-wired
 order: 1
 ---
 
-# Gathering and Linking Web Knowledge
-
-To support robotic agents in executing variations of *Cutting* on different *fruits and vegetables*, we collect two types of knowledge in our knowledge graph: **action** and **object knowledge**.
-Both kinds of knowledge need to be linked to enable task execution as explained **[here](https://food-ninja.github.io/FoodCutting/Architecture.html)**.
-
-## Action Knowledge
+# Action Knowledge
 
 The **action knowledge** covers all properties of a specific manipulation action that are necessary for successfully completing the action and is thus also influenced by the participating objects.
 In general we rely on SOMA[^1] and its upper ontology DUL[^2] to model agent participation in events as well as roles objects play during events and how events effect objects.
 
 For executing *Cutting* actions and its variants, we first collect synonyms and hyponyms for *Cutting* using WordNet[^3], VerbNet[^4] and FrameNet[^5].
-After filtering these verbs regarding their relevance for the cooking domain using our [WikiHow Analysis Tool](https://food-ninja.github.io/FoodCutting/WikiHowAnalysis.html), we propose to divide them into **action groups** with similar motion patterns.
-Based on our observations in [WikiHow](https://www.wikihow.com/) data and [cooking videos](https://youtu.be/VjINuQX4hbM), we differentiate between these tasks in three parameters:
-- position: Where should the robot place its cutting tool? 
-- repetitions: How many cuts should the robot perform?
-- prior task: Does the robot need to execute a specific action group beforehand?
+After filtering these verbs regarding their relevance for the cooking domain using our [WikiHow Analysis Tool](https://food-ninja.github.io/food-cutting-website/knowledge.html#wikihow-analysis), we propose to divide them into **action groups** with similar motion patterns.
+Based on our observations in [WikiHow](https://www.wikihow.com/) data and [cooking videos](https://youtu.be/VjINuQX4hbM), we differentiate between these tasks in five parameters:
+- **position**: Where should the robot place its cutting tool? 
+- **repetitions**: How many cuts should the robot perform?
+- **input**: What shape or part of the food is provided for the action?
+- **output**: What shape or part is the result of the action executtion?
+- **prior task**: Does the robot need to execute a specific action group beforehand?
 
 Based on the remaining 14 words, we created the following 6 action groups:
 <p align="center">
@@ -28,7 +25,7 @@ Based on the remaining 14 words, we created the following 6 action groups:
 </p>
 
 
-## Object Knowledge
+# Object Knowledge
 
 As the name suggests, **object knowledge** covers all relevant information about the objects involved in the task execution (e.g. tools, containers, targets).
 Of course, the relevance of each piece of information depends on the task to be executed.
@@ -41,7 +38,7 @@ For the target group of *fruits & vegetables*, we gather the following informati
 - edibility of the anatomical parts
 - tool to remove the anatomical parts
 
-We gather these information from structured sources like FoodOn[^6] and the PlantOntology[^7], but also from unstructured sources like Recipe1M+[^8] or [WikiHow](https://www.wikihow.com/), using our [WikiHow Analysis Tool](https://food-ninja.github.io/FoodCutting/WikiHowAnalysis.html).
+We gather these information from structured sources like FoodOn[^6] and the PlantOntology[^7], but also from unstructured sources like Recipe1M+[^8] or [WikiHow](https://www.wikihow.com/), using our [WikiHow Analysis Tool](https://food-ninja.github.io/food-cutting-website/knowledge.html#wikihow-analysis).
 In total, the knowledge graph contains:
 - 6 food classes 
 - 18 fruits & 1 vegetable
@@ -50,13 +47,13 @@ In total, the knowledge graph contains:
 - 5 tools (nutcracker, knife, spoon, peeler, hand)
 
 
-## Knowledge Linking
+# Knowledge Linking
 
 After collecting the aforementioned action and object knowledge, this knowledge needs to be linked in our knowledge graph, so that a robot can infer the correct tool to use for a given task or the correct object to cut.
 We set both kinds of knowledge in relation through *dispositions* and *affordances*, as visualised below for an apple:
 
 <p align="center">
-  <img src="assets/images/Apple Example Affordances.png" width="800" alt="Connecting affordances and dispositions for an apple"/><br>
+  <img src="assets/images/Apple Example Affordances.jpg" width="800" alt="Connecting affordances and dispositions for an apple"/><br>
 </p>
 
 In general, a disposition describes the property of an object, thereby enabling an agent to perform a certain task[^9] as in a knife can be used for cutting, whereas an affordance describes what an object or the environment offers an agent[^10] as in an apple affords to be cut.

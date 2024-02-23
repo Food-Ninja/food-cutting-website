@@ -1,15 +1,14 @@
 ---
-title: WikiHow Analysis
+title: WikiHow Analysis Tool
 layout: "page"
 icon: fa-list-ol
 order: 3
 ---
 
-# [WikiHow Analysis Tool](https://github.com/Food-Ninja/WikiHow-Instruction-Extraction)
-
 To gather additional knowledge about manipulation actions and their associated verbs, we developed a tool analysing a [WikiHow](https://www.wikihow.com) corpus[^1].
 The goal is to better the understanding of manipulation verbs and their parameterization for different objects, goals and environments.
 The tool uses basic NLP techniques like Part-of-Speech Tagging and Coreference Resolution from the Stanford CoreNLP Toolkit[^2] to extract verb frames.
+It can be found on [GitHub](https://github.com/Food-Ninja/WikiHow-Instruction-Extraction).
 
 The WikiHow articles analysed by our tool are structured in the following way:
 
@@ -45,7 +44,7 @@ The exemplary result for the *Cutting* verb group can be seen below:
 
 In the table, the three verbs with the most occurrences per column (apart from *cut*) were marked in **bold**.
 In our ontology, we currently cover *slice*, *dice*, *halve*, *quarter* and *cube*.
-With this knowledge, the relevance of different hyponyms for the application domain can be assessed and a better focus can be set in the following steps of our [methodology](./Methodology.html).
+With this knowledge, the relevance of different hyponyms for the application domain can be assessed.
 
 ## References
 

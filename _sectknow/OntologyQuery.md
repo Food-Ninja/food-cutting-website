@@ -9,10 +9,9 @@ order: 2
 
 If you want to access the contained knowledge using predefined standard queries, please use our <a href="http://grlc.io/api/Food-Ninja/FoodCutting/sparqlfiles/">grlc interface</a>[^1] for predefined queries.
 
-
 # Querying Food Cutting Knowledge Using SPARQL
 
-To try the querying using SPARQL yourself, please use our **[webinterface](https://food-ninja.github.io/FoodCutting/index.html)**.
+To try the querying using SPARQL yourself, please use our **[webinterface](https://food-ninja.github.io/food-cutting-website/experiments.html#generating-cutting-plans)**.
 
 The robot knows that for all cutting actions like slicing, dicing, halving or quartering it needs to perform the following body movements:
 
@@ -129,6 +128,7 @@ SELECT ?sub ?position WHERE {
 ```
 
 # Querying Food Cutting Knowledge Using Prolog
+
 All information in the stated ontology is accessible by the robot through queries at runtime.
 The action designator also uses Prolog as the inference engine to convert symbolic action descriptions into ROS action goals or similar data structures. 
 Since the inference engine is already in Prolog, necessary information can be acquired through queries. 
