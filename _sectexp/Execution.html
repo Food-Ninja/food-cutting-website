@@ -47,7 +47,8 @@ order: 2
 				// Redirect to the selected link
 				var selectedLink = links[selectedKey];
 				if (selectedLink) {
-					window.location.href = selectedLink;
+					//window.location.href = selectedLink;
+					window.open(selectedLink, '_blank');
 				} else {
 					alert("No link defined for the selected combination.");
 				}
