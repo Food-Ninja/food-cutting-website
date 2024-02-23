@@ -3,10 +3,16 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: page
-title: Home
+title: Food Cutting
 icon: fa-home
 order: 1
 ---
+
+**ANNOUNCEMENT**
+We present our work in a **Tutorial on Contextualizing and Executing Robot Manipulation Plans Using Web Knowledge** at [ESWC24](https://2024.eswc-conferences.org/) and [HHAI24](https://hhai-conference.org/2024/).
+More information can be found on the corresponding [Website](https://kr3-workshop.net/).
+
+
 
 This project deals with the challenge of enabling robots to learn everyday manipulation tasks in the household domain.
 This challenge is important for robots that can perform a wide breadth of manipulation tasks and task variations, that can be performed by various robots using various tools for a variety of purposes.
@@ -16,7 +22,7 @@ The focus of this work lies on the task of *Cutting Food*, especially fruits and
   <img src="assets/images/Motivation.jpg" width="800" alt="Enabling cognitive robots to cut food objects through an ontology"/><br>
 </p>
 
-## Disclaimer
+# Disclaimer
 
 The knowledge graph is made available under the [Open Data Commons Attribution License](http://opendatacommons.org/licenses/by/1.0/). It is publicly available [here](https://github.com/Food-Ninja/FoodCutting/blob/main/food_cutting.owl) and on [triply](https://api.krr.triply.cc/datasets/mkumpel/FruitCuttingKG/services/FruitCuttingKG/sparql) for inspection and querying, many thanks to the [knowledge representation and reasoning group](https://krr.cs.vu.nl/) at the Vrije Universiteit Amsterdam.
 
