@@ -5,12 +5,10 @@ icon: fa-utensils
 order: 3
 ---
 
-# Experiment
-
 We employ queries to evaluate the robot's performance on different *cutting* tasks.
 These queries demonstrate how the robot dynamically adapts its task or behaviour based on acquired knowledge.
 We utilise the PR2 Robot as the robotic platform for our experiments in a simulated environment called [PyBullet](https://github.com/bulletphysics/bullet3).
-Since this environment does not support actions like peeling or core removal from a physical perspective, we focus on simulating queries that demonstrate how the general task mentioned **[here](https://food-ninja.github.io/FoodCutting/Architecture.html)** can be parameterised using the gathered **[web knowledge](https://food-ninja.github.io/FoodCutting/Knowledge.html)** from our knowledge graph.
+Since this environment does not support actions like peeling or core removal from a physical perspective, we focus on simulating queries that demonstrate how the general task mentioned above can be parameterised using the gathered **[web knowledge](https://food-ninja.github.io/food-cutting-website/knowledge.html)** from our knowledge graph.
 
 <p align="center" width="90%">
       <img width="30%" src="assets/images/oneslice.png"/>

@@ -1,14 +1,12 @@
 ---
-title: CRAM
+title: Linking to CRAM
 layout: "page"
-icon: fa-landmark
+icon: fa-cogs
 order: 2
 ---
 
-# Linking to [CRAM](https://cram-system.org/)[^1]
-
-As explained in [Step 5](./Methodology.html) of our methodology, we link the created knowledge graph to a cognitive architecture capable of executing manipulation tasks.
-We use the CRAM cognitive architecture, which depends on so called designators written in Common LISP to represent actions, locations or objects.
+We link the created knowledge graph to a cognitive architecture capable of executing manipulation tasks.
+We use the [CRAM cognitive architecture](https://cram-system.org/)[^1], which depends on so called designators written in Common LISP to represent actions, locations or objects.
 In general, a designator functions as a placeholder for information that is yet to be determined.
 As an example, an excerpt from the designator for cutting food is shown below:
 
@@ -24,7 +22,7 @@ As an example, an excerpt from the designator for cutting food is shown below:
 ```
  
 For the execution, several parameters (represented as Prolog variables symbolized by the *?*) need to be specified, which includes here the *object acted on*, *object to use as a tool*, *left arm*, *right arm* and the *goal*.
-During the execution, these parameters are erved with information [queried from the ontology](./OntologyQuery.html) based on the current execution context.
+During the execution, these parameters are erved with information queried from the ontology based on the current execution context.
 In order to access data from the ontology, the data is imported into KnowRob[^2] and MongoDB.
 
 For the specific task at hand, the intended target object is an apple, the tool to use is a knife, the left arm holds the apple in place and the right arm holds the knife.

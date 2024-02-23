@@ -1,7 +1,7 @@
 ---
 title: Knowledge Types
 layout: "page"
-icon: fa-network-wired
+icon: fa-graduation-cap
 order: 1
 ---
 
@@ -11,7 +11,7 @@ The **action knowledge** covers all properties of a specific manipulation action
 In general we rely on SOMA[^1] and its upper ontology DUL[^2] to model agent participation in events as well as roles objects play during events and how events effect objects.
 
 For executing *Cutting* actions and its variants, we first collect synonyms and hyponyms for *Cutting* using WordNet[^3], VerbNet[^4] and FrameNet[^5].
-After filtering these verbs regarding their relevance for the cooking domain using our [WikiHow Analysis Tool](https://food-ninja.github.io/food-cutting-website/knowledge.html#wikihow-analysis), we propose to divide them into **action groups** with similar motion patterns.
+After filtering these verbs regarding their relevance for the cooking domain using our WikiHow Analysis Tool, we propose to divide them into **action groups** with similar motion patterns.
 Based on our observations in [WikiHow](https://www.wikihow.com/) data and [cooking videos](https://youtu.be/VjINuQX4hbM), we differentiate between these tasks in five parameters:
 - **position**: Where should the robot place its cutting tool? 
 - **repetitions**: How many cuts should the robot perform?
@@ -38,7 +38,7 @@ For the target group of *fruits & vegetables*, we gather the following informati
 - edibility of the anatomical parts
 - tool to remove the anatomical parts
 
-We gather these information from structured sources like FoodOn[^6] and the PlantOntology[^7], but also from unstructured sources like Recipe1M+[^8] or [WikiHow](https://www.wikihow.com/), using our [WikiHow Analysis Tool](https://food-ninja.github.io/food-cutting-website/knowledge.html#wikihow-analysis).
+We gather these information from structured sources like FoodOn[^6] and the PlantOntology[^7], but also from unstructured sources like Recipe1M+[^8] or [WikiHow](https://www.wikihow.com/), using our WikiHow Analysis Tool.
 In total, the knowledge graph contains:
 - 6 food classes 
 - 18 fruits & 1 vegetable
