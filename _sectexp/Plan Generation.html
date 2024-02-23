@@ -1,8 +1,8 @@
 ---
-title: Webinterface
+title: Generating Cutting Plans
 layout: "page"
-icon: fa-comment
-order: 5
+icon: fa-route
+order: 1
 ---
 
 
@@ -344,22 +344,10 @@ order: 5
                 add_to_table(curr_step + "c", "... lifting the empty gripper", "")
 			}
 		</script>
-		<center><h1>Challenge: We want to enable robots to learn everyday manipulation tasks from the Web and thus make abstract knowledge <b>actionable</b>.</h1></center>
 
-		This challenge is important for robots that can perform a wide breadth of manipulation tasks and task variations, that can be performed by various robots using various tools for a variety of purposes.<br>
-
-		<p>For a robot to successfully perform such a breadth of maniulation actions, it needs to <b>understand</b> given tasks. On this website we show how robots can use a knowledge graph to understand a given task by answering questions such as<br>
-			"What is the result state when performing a specific action?"<br>
-			"What object can be used to perform a given task?" "Is there a preferred object to use for this task?"<br>
-			"Can the task be performed on a given object?" etc.</p>
-			
-		<p>We start tackling this challenge by focusing on selected task domains, starting with cutting. The idea is that our methodology can teach robots to cut any fruit with any to for any purpose, as visualised below. For this, the robot needs to query the knowledge graph to parameterise its general action plan.</p>
-		<p align="center">
-  <img src="img/Motivation3.jpg" width="600" alt="Enabling cognitive robots to cut food objects through an ontology"/><br>
-</p>	
 		<p><b>Usage:</b> Please choose a <b>cutting verb</b> and a <b>food object</b> from the dropdown lists below. Based on a food cutting knowledge graph, a sequence of motions will be returned that a robot can use for action parameterisation.</p>
   
-		<label for="food-select">I want the robot to execute the <b>task</b>: </label>
+		<label for="food-select">I want to generate a robot plan for executing the <b>task</b>: </label>
 		<select name="verbs" id="verb-select">		
 			<option value="cut:Carving">Carving</option>
 			<option value="cut:Chopping">Chopping</option>
@@ -414,49 +402,4 @@ order: 5
           </table> 
 		</div>
 	</body>
-	
-	  <!-- New "Try it on robot" section -->
-  <hr>
-  <p><b>Try it on the robot:</b></p>
-
-  <label for="environment-options">Choose an Environemnt option:</label>
-  <select name="environment-options" id="environment-options">
-    <option value="environment:kitchen">Kitchen</option>
-    <option value="environment:apartment">Apartment</option>
-  </select>
-  
-  <label for="robot-options">for Robot:</label>
-  <select name="robot-options" id="robot-options">
-    <option value="robot:PR2">PR2</option>
-  </select>
-  
-  
-
-  <!-- Define the links corresponding to each option -->
-  <button type="button" onclick="navigateToSelectedOption()"> Run </button>
-
-  <!-- Add this script section to your HTML -->
-<script>
-  function navigateToSelectedOption() {
-    var selectedEnvironmentOption = document.getElementById("environment-options").value;
-    var selectedRobotOption = document.getElementById("robot-options").value;
-
-    // Define links based on the combination of selected options
-    var links = {
-      'environment:kitchen:robot:PR2': 'https://binder.intel4coro.de/v2/gh/sunava/pycram/6083d5a6c005a862a56bf60deefc13a615f89121?urlpath=lab%2Ftree%2Fdemos%2Fpycram_cutting_demo%2Fcutting-example.ipynb',
-      'environment:apartment:robot:PR2': 'https://binder.intel4coro.de/v2/gh/sunava/pycram/6083d5a6c005a862a56bf60deefc13a615f89121?urlpath=lab%2Ftree%2Fdemos%2Fpycram_cutting_demo%2Fcutting-example.ipynb',
-    };
-
-    // Construct the key based on the selected options
-    var selectedKey = selectedEnvironmentOption + ':' + selectedRobotOption;
-
-    // Redirect to the selected link
-    var selectedLink = links[selectedKey];
-    if (selectedLink) {
-      window.location.href = selectedLink;
-    } else {
-      alert("No link defined for the selected combination.");
-    }
-  }
-</script>
 </html>
