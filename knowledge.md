@@ -1,6 +1,6 @@
 ---
 title: Knowledge Extraction
-layout: home
+layout: know
 icon: fa-project-diagram
 order: 2
 ---
