@@ -1,7 +1,7 @@
 ---
 title: Knowledge Extraction
 layout: "page"
-icon: fa-circle-nodes
+icon: fa-project-diagram
 order: 2
 ---
 
