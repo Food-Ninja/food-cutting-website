@@ -1,6 +1,6 @@
 ---
 title: Executing Actions
-layout: "page"
+layout: home
 icon: fa-robot
 order: 3
 ---
